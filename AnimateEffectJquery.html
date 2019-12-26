@@ -1,0 +1,83 @@
+
+<html >
+    <head>
+        <title>Animate Effects</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <button id="btn1" >Click me</button>
+        <button id="btn2" >Click me 2</button>
+        <button id="btn3" >Animate</button>
+        
+        <h2>Effects in jquery</h2>
+
+        <p >This is para without div</p>
+            <p >This is para without div</p>
+        <div id="div1"  class="mydivs" >
+            <p >This is div 1 and para 1</p>
+            <p >This is div 1 and para 2</p>
+            
+        </div>
+
+        <div id= "div2" class="mydivs">
+            <p >This is div 2 and para 3</p>
+        </div>
+         
+        <div id="div3" class="mydivs"> <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+
+        </ul>
+        </div>
+        <div >
+            <p >This is div 4</p>
+            <p >This is div 4</p>
+            
+        </div>
+        <div > <ul>
+            <li>item 11</li>
+            <li>item 12</li>
+            <li>item 13</li>
+            <li>item 14</li>
+
+        </ul>
+        </div>
+
+        <div id="cube" class="mycube" >
+            <p >This is cube</p>
+            
+            
+        </div>
+
+       
+    </body>
+    
+    
+    <script src="jquery.js">//using jquery </script>
+    
+    <script>
+
+        
+        $(document).ready(function(){
+
+
+           $("#btn3").click(function(){
+            $("#cube").animate({
+                //these are CSS parameter.Applies when a "animate bitton is clicked"
+                left:'150 px',
+                opacity: '1',
+                width: '1000 px',
+                height: '100 px'
+            },3000);//you can use "slow" or "fast instead of 3000 inside ()".
+           
+
+           });
+
+        });
+
+    
+    </script>
+    
+    </html>

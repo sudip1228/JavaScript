@@ -1,0 +1,41 @@
+
+<html >
+    <head>
+        <title>Jquery UI/title</title>
+        <link rel="stylesheet" href="style1.css">
+        <!--using jqueryui css files-->
+        
+        <link rel="stylesheet" href="jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui.theme.css">
+     </head>
+    <body>
+        <div id="mydiv">
+       <h3 id="heading">Introduction to Jquery UI  </h3>
+       <input id="dateinput"  placeholder="click to select date" type="text">
+        </div>
+    </body>
+    
+    <script src="jquery.js" type="text/javascript">//using jquery//this should be always above jqueryUI </script>
+    <script src="jquery-ui.js" type="text/javascript">//using jqueryUI </script> 
+   
+   <script>
+   $("#mydiv").datepicker();//gives you a date table
+
+    
+   $("#dateinput").datepicker({
+        //these below variables or parameter things are called options
+       numberOfMonths:2,//shows two months on the website
+       changeYear:true,
+       changeMonth:true,
+       showWeek:true,
+       weekHeader:"week number ok",
+       showOtherMonths:true,
+       minDate: new Date(2018,0,9),//minmum year you can see in your calender.format. yy/mm/date.here 0 means january
+       maxDate: new Date(2021,0,16)//maximum year you can see in your calender
+   });
+
+   </script>
+    
+ 
+    </html>

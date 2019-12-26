@@ -1,0 +1,39 @@
+<html >
+<head>
+    
+    <title>Document</title>
+
+    <script>
+
+        var ID=0;//global variable which stores the updated value.
+        var seconds=0;
+       function print(){
+           document.getElementById("op").innerHTML=seconds+" seconds";
+           seconds++;
+          
+       }
+       function start(){
+
+      //  ID= window.setTimeout(print,5000);//window object is above document object heirarchy.dont use () on print function.
+       ID= window.setInterval(print,1000);//setinterval method prints the same message over and over again after specified time.here the  same message is printed every 1 second.
+    
+    }
+
+       function stop(){
+
+       // window.clearTimeout(ID);//clears the set timeoutwhen u press stop the start method wont be called or it doesnt work.
+       window.clearInterval(ID);//clears the setinterval method
+    }//you have to use ID of the settimeout method here.Now the ID is not zero but the ID is the value assigned by setTimer method. 
+    </script>
+</head>
+<body>   
+
+
+        <button onclick= "start()" id="btnadd">start</button>
+        <h2 id="op">some text</h2>
+
+        <button onclick= "stop()" id="btnstop">stop</button>
+    
+        
+</body>
+</html>

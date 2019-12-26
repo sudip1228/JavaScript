@@ -1,0 +1,46 @@
+
+<html >
+    <head>
+        <title>Autocomplete</title>
+        <link rel="stylesheet" href="style1.css">
+        <!--using jqueryui css files-->
+        
+        <link rel="stylesheet" href="jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui.theme.css">
+     </head>
+    <body>
+
+    <h2>  AutoComplete in Jquery UI  </h2>
+        <div class="mydivs">
+ 
+            <label> <b>Enter your favourite city</b></label>
+            <input type="text" name="" id="citytextbox">
+
+        </div>
+        <br>
+      
+
+    </body>
+    
+    <script src="jquery.js" type="text/javascript">//using jquery//this should be always above jqueryUI </script>
+    <script src="jquery-ui.js" type="text/javascript">//using jqueryUI </script> 
+   
+   <script>
+       var city= ["New york", "LA", "philly","balitomre","seattle", "dallas","Boston","New Delhi"];
+       $("#citytextbox").autocomplete({//Autocomplete displays the list of items when you click the input box in webpage
+
+           source:city,//pass the array city to "source".you can also directly put the array in the source without creating seperaten arrays like above.
+       },
+       {
+        autoFocus:true,
+        delay:300,//waiting time to show the list of items.
+        minLength:2//must type atleast two letter to see available list of items on the input box
+
+       });//the parameters are passed in between  curly braces{}.here are two curly braces as there are two parameters of "autocomplete" object
+
+      
+   </script>
+    
+ 
+    </html>

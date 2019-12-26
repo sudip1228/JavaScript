@@ -1,0 +1,40 @@
+
+<html >
+    <head>
+        <title>Resizable Interaction</title>
+        <link rel="stylesheet" href="style1.css">
+        <!--using jqueryui css files-->
+        
+        <link rel="stylesheet" href="jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui.theme.css">
+     </head>
+    <body>
+
+    <h2>  Resizable Interaction in Jquery UI  </h2>
+
+    <div id="mydivs">
+
+            <img src="sudip.jpg" width="200px" id="resize" >
+
+    </div>
+    </body>
+    
+    <script src="jquery.js" type="text/javascript">//using jquery//this should be always above jqueryUI </script>
+    <script src="jquery-ui.js" type="text/javascript">//using jqueryUI </script> 
+   
+   <script>
+      $("#resize").resizable()({//you can change the size of the image as your desire
+        //maxWidth:500,//maximum width you can change is 500px
+        //maxHeight:500,//maximum height you can change is 500px
+        autoHide:true,//hides some icon on the image
+        distance: 200,//you have to go 200px to excecute the expanding of the image
+        ghost: true,//you will see ghost image while resizing meaning you will see other fading out image on the back
+        aspectRatio:false//lets image to be in proper quality
+        
+      });
+      
+   </script>
+    
+ 
+    </html>

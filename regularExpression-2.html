@@ -1,0 +1,47 @@
+<html >
+<head>
+    
+    <title>Document</title>
+
+    <script>
+        function validate(){
+          var username=document.getElementById("uname").value;
+          //regx= new RegExp("E00","i");//alternate way for reg expr
+       // var regex= /[sdp]imple/i;//first letter can be either s ,d or p followed by imple.
+       var regex= /[a-x]imple/i;//range a-x is allowed followed by imple
+      // var regex= /[0-9]abc/i;
+     // var regex= /[0-5]a[6-9][a-z]/i;//using multiple ranges
+     var regex= /[^1abc]abc/i//here "1abc" all are excluded before abc meaning those values are invalid to use.
+     var regex=/[^a-z]abc/;//using range for excluison of values 
+     //var regex=/[a-x A-X]imple///alternate of using"i"
+            if(regex.test(username))//returns boolean true value if username contains E00
+            {
+
+                alert("valid username");
+            }
+
+            else{
+                alert("invalid username");
+                document.getElementById("lbluser").style.visibility="visible";//using label of html to highlight the invalid message
+            }
+        }
+    
+    </script>
+</head>
+<body>
+
+    <form >
+
+        <input id="uname" placeholder="username" type="text"/> 
+        <label id= "lbluser" style="color:red; visibility:hidden">invalid</label>
+        <br><br>
+
+        
+
+        <br><br>
+        <button onclick="validate()" type="button">submit</button>
+
+    </form>
+        
+</body>
+</html>

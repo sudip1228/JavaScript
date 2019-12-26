@@ -1,0 +1,55 @@
+
+<html >
+    <head>
+        <title>Draggable Interaction</title>
+        <link rel="stylesheet" href="style1.css">
+        <!--using jqueryui css files-->
+        
+        <link rel="stylesheet" href="jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui.theme.css">
+     </head>
+    <body>
+
+    <h2>  Draggable Interaction in Jquery UI  </h2>
+
+    <div style="border: 1px solid black">
+        <div class="cube">
+            <h3>
+
+                CUBE1
+            </h3>
+        </div>
+
+       <div class="cube">
+                <h3>
+    
+                    CUBE2
+                </h3>
+ 
+            </div>
+
+    </div>
+    </body>
+    
+    <script src="jquery.js" type="text/javascript">//using jquery//this should be always above jqueryUI </script>
+    <script src="jquery-ui.js" type="text/javascript">//using jqueryUI </script> 
+   
+   <script>
+      $(".cube").draggable({//you can drag the cube class
+
+         // axis:"y",//you can only drag cube division from top to bottom which is y-axis
+        //axis:"x",
+         // containment: "parent",//now you cannot drag outside the screen and you cannot drag the cube outside division area or boundry
+         // containment: "document"//now you can drag anywhere in the website but you can not go outside the visible screen.
+        cursor:"grabbing",//cursor shows as a hand on the screen and meanwhile the opacity becomes 0.5.You can move anywhere on screen
+        opacity:0.5,//helps fadeout and fadein
+        grid:[300,300],//cube moves 300px up or down or left or right.It jumps to 300px
+        snap:true,//now cube1 sticks to cube2
+        snapTolerance:30// minimum distance for snaping to happen meaning at that distance two cubes are attached.
+      });
+      
+   </script>
+    
+ 
+    </html>

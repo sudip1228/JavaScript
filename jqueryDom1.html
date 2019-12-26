@@ -1,0 +1,63 @@
+
+<html >
+    <head>
+        <title>Jquery Dom</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <button id="btn1" >click me</button>
+        <button id="btn2" onclick="fn1()" >click me 2</button>
+        
+        
+        <h2>Jquery Dom</h2>
+
+        <p >This is para without div</p>
+        <p >This is para without div</p>
+
+        <div id="div1"  class="mydivs" >
+            <p id="p1" class="class1" value="hello world">This is <b>div 1</b>  and  <b>para 1 <i>ok</i></b></p>
+            
+        </div>
+
+        
+      
+
+    </body>
+    
+    
+    <script src="jquery.js">//using jquery </script>
+    
+    
+    <script>
+
+        function fn1()
+        {
+            alert("working");
+        }
+
+        
+        $(document).ready(function(){
+
+          $("#btn1").click(function(){
+
+            var txt= $("#p1").text();//accesing a paragraph using jquery.
+           // $("#p1").text("hello world");//setting the paragraph using text method
+           // alert(txt);
+            //alert($("#p1").text());
+           // alert($("#p1").html());//whole html is returned back
+           // $("#p1").html(" This is html tag <b>div 1</b>  and  <b>para 1 <i>ok</i>");//setting the paragraph using html method but here it doesnot retuns in html format
+              //  $("#p1").text(" This is html tag <b>div 1</b>  and  <b>para 1 <i>ok</i>");//returns as a text as a whole
+                  // alert( $("#p1").attr("class"));//the attr method shows the value or content of the given attribute
+                  // alert( $("#p1").css("font-size"));//it gives you CSS information.For example.what is the font size used in particular html element.here,this paragraph is using a 16px font-size
+                   alert( $("#div1").css("font-size"));//gives you border of id=div1.
+
+
+          })
+          
+
+        });
+
+    
+    </script>
+    
+    </html>

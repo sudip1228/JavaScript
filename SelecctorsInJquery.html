@@ -1,0 +1,33 @@
+
+<html >
+    <head>
+        <title>Jquery Selectors</title>
+        <link rel="stylesheet" href="style.css"><!--using css file located in CSS folder.Now the heading color with id=h21 will be blue   -->
+    </head>
+    <body>
+    
+        <h2 class="myheading" id="h21">Selectors of jquery</h2>
+        <h2 class="myheading">Selectors of jquery</h2>
+        <h2>Selectors of jquery</h2>
+        <div class="myheading" >
+            <p >This is para 1</p>
+            <p> This is para 2</p>
+
+        </div>
+
+        <button id="btn1" onclick="fn1()">Click me</button>
+    </body>
+    
+    
+    <script src="jquery.js">//using jquery </script>
+    
+    <script>
+    function fn1()
+    {
+       // $("h2").fadeToggle();//selecting whole h2.no need to use "." or "#" to access all headings.
+       // $("#h21").fadeToggle();//selectors are placed inside ().use # beside ID name to access the ID.
+        $(".myheading").fadeToggle();//use "." to access class name.
+      }
+    </script>
+    
+    </html>

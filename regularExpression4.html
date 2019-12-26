@@ -1,0 +1,49 @@
+<html >
+<head>
+    
+    <title>Document</title>
+
+    <script>
+        function validate(){
+          var text= document.getElementById("text1").value;
+            var regx= /^([a-z A-Z 0-9\.-]+)@([a-z A-Z 0-9-]+).([a-z]{2,20})(.[a-z]{2,8})?$/;
+            // use "." represents the special cahracter so use it with backward slash when using inside[].
+           //"+"represents you can mention as many character you like satisfying the condition
+           //here {2,20} represents the length of the character.minimum=2 and max= 20
+           //? means the last part of expression is optional. it depends upon you if you want to ornot want to use last part of regular expression which is indicates in round bracket().
+           if(regx.test(text)) {
+
+                document.getElementById("lbltext").innerHTML="valid";
+                document.getElementById("lbltext").style.visibility="visible";
+                document.getElementById("lbltext").style.color="green";
+
+
+            }
+
+            else{
+                document.getElementById("lbltext").innerHTML="invalid";
+                document.getElementById("lbltext").style.visibility="visible";
+                document.getElementById("lbltext").style.color="red";
+            }
+        }
+    
+    </script>
+</head>
+<body>
+
+    <form >
+
+        <input id="text1" placeholder="email" type="text"/> <br>
+        <label id= "lbltext" style="color:red; visibility:hidden">invalid</label>
+        <br><br>
+
+        
+
+        <br><br>
+        <button onclick="validate()" type="button">submit</button>
+
+    </form>
+    <img src="sudip.jpg" width="380"/>
+        
+</body>
+</html>

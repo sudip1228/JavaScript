@@ -1,0 +1,87 @@
+
+<html >
+    <head>
+        <title>Jquery Selectors</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <button id="btn1" >Click me</button>
+        <button id="btn2" >Click me 2</button>
+        <button id="btn3" >toggle</button>
+        
+        <h2>Effects in jquery</h2>
+
+        <p >This is para without div</p>
+            <p >This is para without div</p>
+        <div id="div1"  class="mydivs" >
+            <p >This is div 1 and para 1</p>
+            <p >This is div 1 and para 2</p>
+            
+        </div>
+
+        <div id= "div2" class="mydivs">
+            <p >This is div 2 and para 3</p>
+        </div>
+         
+        <div id="div3" class="mydivs"> <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+
+        </ul>
+        </div>
+        <div >
+            <p >This is div 4</p>
+            <p >This is div 4</p>
+            
+        </div>
+        <div > <ul>
+            <li>item 11</li>
+            <li>item 12</li>
+            <li>item 13</li>
+            <li>item 14</li>
+
+        </ul>
+        </div>
+
+       
+    </body>
+    
+    
+    <script src="jquery.js">//using jquery </script>
+    
+    <script>
+
+        
+        $(document).ready(function(){
+
+           $("#btn1").click(function(){
+            $("#div1").hide("slow");//hides div1
+           // $("#div1").fadeOut("2000");//fadeout div1
+            // $("#div1").slideUp();//slides up div1
+
+           });
+        
+  
+           $("#btn2").click(function(){
+            $("#div1").show("fast");//shows div1
+            // $("#div1").fadeIn();//fadein div1
+            // $("#div1").slideDown("2000");//slides down div1
+
+           });
+
+
+           $("#btn3").click(function(){
+            $("#div1").toggle();//perform both hide and show
+            // $("#div1").fadeToggle();//toggle or perform both fadin and fadeout function of div1
+            // $("#div1").slideToggle();//does both slideup and down div1
+
+           });
+
+        });
+
+    
+    </script>
+    
+    </html>

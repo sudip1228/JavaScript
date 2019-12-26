@@ -1,0 +1,69 @@
+
+<html >
+    <head>
+        <title>Jquery Selectors</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    
+        
+        <h2>Selectors of jquery</h2>
+
+        <p >This is para without div</p>
+            <p >This is para without div</p>
+        <div id="div1"  class="mydivs" >
+            <p >This is div 1 and para 1</p>
+            <p >This is div 1 and para 2</p>
+            
+        </div>
+
+        <div id= "div2" class="mydivs">
+            <p >This is div 2 and para 3</p>
+        </div>
+         
+        <div id="div3" class="mydivs"> <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+
+        </ul>
+        </div>
+        <div >
+            <p >This is div 4</p>
+            <p >This is div 4</p>
+            
+        </div>
+        <div > <ul>
+            <li>item 11</li>
+            <li>item 12</li>
+            <li>item 13</li>
+            <li>item 14</li>
+
+        </ul>
+        </div>
+
+        <button id="btn1" onclick="fn1()">Click me</button>
+    </body>
+    
+    
+    <script src="jquery.js">//using jquery </script>
+    
+    <script>
+    function fn1()
+    {
+    
+       // $("#div1,#div2").fadeToggle(1500);//hides 2 divs  with given ids
+       // $("#div1,p,li,.mydivs").fadeToggle(1500);//hides all para and list aswell
+      // $("#div1,li,.mydivs").fadeToggle(1500);//hides all divs with classname=mydivs
+     // $("div > p").fadeToggle(1000);//div is parent and p is child. parent > child is the syntax.This hides or fades out only the paragraph inside the division but does not hide the division itself.
+     // $("div p")//same as above
+      //$("p:first").fadeToggle();//hides only the first paragraph
+       // $(".mydivs:first").fadeToggle();//first div of class name mydiv will be hided.
+      //  $(".mydivs:even").fadeToggle();//hides even division example divison 0, 2,4 all will be hidden.div count starts from 0.
+        //$("li:even").fadeToggle();//hides the even items of all the lists.
+        $("li:odd").fadeToggle();
+    }
+    </script>
+    
+    </html>

@@ -1,0 +1,79 @@
+
+<html >
+    <head>
+        <title>Jquery UI/title</title>
+        <link rel="stylesheet" href="style1.css">
+        <!--using jqueryui css files-->
+        
+        <link rel="stylesheet" href="jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui.theme.css">
+     </head>
+    <body>
+
+    <h2>  Message Box in Jquery UI  </h2>
+        <div id="div1" class="mydivs">
+ 
+       <h3 >Learning 1</h3>
+       <button id="btn1" > click 1</button>
+
+        </div>
+        <br>
+        <div id= "div2" title="messagebox" class="mydivs">
+      <h3 >Learning 2</h3>
+                <img src="sudip.jpg" width="200px">
+            <br><br><br>
+                 
+        </div>
+
+    </body>
+    
+    <script src="jquery.js" type="text/javascript">//using jquery//this should be always above jqueryUI </script>
+    <script src="jquery-ui.js" type="text/javascript">//using jqueryUI </script> 
+   
+   <script>
+
+       // $("#div2").dialog();//you can also use dialog method outside events.now you will get a message box as soon as webspage is opened.
+       $("#btn1").click(function (){
+
+        $("#div2").dialog({//div2 is now converted to dialogBox or message box which you can drag in your website
+        title: "Custom Message Box",//giving new title name to the messgebox
+      //  draggable:false,//deactivating the dragging function
+        draggable:true,  //activating the dragging function
+        resizable: true,//you can change the size of message box  making it smaller or larger as your wish
+        height: 300, //giving height to the message box
+        weight: 300,  //giving weight to the message box
+        modal:true,  //now you cant do any activity on the website such as clicking the button.you have to close the message box to perform any activity
+        
+        buttons: [//creating the array of custom button inside the messagebox
+            {
+            text: "close", //name of the first button
+            icon: "ui-icon-heart",//google it.it is jus the design of the icon seen on the screen
+            click: function(){
+                $(this).dialog("close");//closes the dialoge box.here "this means" the "div2".you can write "#div2".dialoge("close") instead of "this"
+            }
+            },
+            {
+
+                text:"ok",//name of the second button
+                icon: "ui-icon-heart",
+                click: function ()
+                {
+                    alert("hello");//closes the dialoge box
+                }
+
+            }
+
+        ]
+        
+        
+        });
+        
+
+
+
+       });
+   </script>
+    
+ 
+    </html>

@@ -1,0 +1,71 @@
+
+<html >
+    <head>
+        <title>Jquey Dom</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <button id="btn1" >append</button>
+        <button id="btn2" >after</button>
+        <button id="btn3" >prepend</button>
+        <button id="btn4" >before</button>
+        
+        <br><br>
+        <button id="btn5" >remove</button>
+        <button id="btn6" >empty</button>
+        
+        
+        <h2>Jquey Dom</h2>
+
+
+        <div id="div1"  class="mydivs" >
+            <p id="p1" class="class1" value="hello world">This is <b>div 1</b>  and  <b>para 1 <i>ok</i></b></p>
+            <p id="p2" class="class2" value="hello nice world">This is <b>div 1</b>  and  <b>para 1 <i>ok</i></b></p>
+
+            
+        </div>
+
+        
+    </body>
+    
+    
+    <script src="jquery.js">//using jquery </script>
+    
+    <script>
+
+        
+        $(document).ready(function(){
+
+          $("#btn1").click(function(){
+
+            $("#div1").append("<p>using append method</p> ");//Append method adds the content at the end inside the selected html elements   
+            })
+
+          $("#btn2").click(function(){
+            $("#div1").after("<p>using after method </p>");//After method inserts contents outside selected elements.here the content will be inserted after or outside div1
+          })
+
+            $("#btn3").click(function(){//Prepand method adds the content in the begining inside the selected html elements 
+            $("#div1").prepend("<p>using prepand method </p>");
+            })
+
+            $("#btn4").click(function(){//Before method adds the content in the beggining outside the selected html elements 
+            $("#div1").before("<p>using before method </p>");
+            })
+
+            $("#btn5").click(function(){//Remove method removes the entire element tag.It removes division tag in this example.
+           // $("#div1").remove();
+          // $("p").remove("#p1");//removes only one paragraph with id "p1".
+             $("p").remove("#p1, #p2");//removes two paragraphs with id "p1" and "p2".You can also pass classname instead of id name
+            })
+
+            $("#btn6").click(function(){//Empty method removes the content inside the selected html elements.
+            $("#div1").empty();
+            })
+          
+        });
+
+    
+    </script>
+    
+    </html>

@@ -1,0 +1,28 @@
+
+<html >
+<head>
+    
+    <title>Document</title>
+
+    <script>
+    function fn1(){
+       var element= document.getElementsByClassName("mypara");
+       for (var x=0;x<element.length;x++)
+       {
+           element[x].style.color= "red";
+       }
+    }
+    </script>
+</head>
+<body>
+
+        <p class="mypara">para 1</p>
+        <p>para 2</p>
+        <p class="mypara">para 3</p>
+        <p>para 4</p>
+        <p class="mypara">para 5</p>
+        <a class= "mypara" href="#"> This is Anchor tag</a>
+        <br>
+        <button onclick="fn1()">Click me</button>
+</body>
+</html>

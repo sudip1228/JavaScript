@@ -1,0 +1,40 @@
+<html >
+<head>
+    
+    <title>Document</title>
+
+    <script>
+        function validate(){
+           var username= document.getElementById("uname");
+           var password= document.getElementById("pass");
+           if(username.value.trim()==""||password.value=="")
+           {//trim function wont let any empty space even using a spacebar on the keyboard
+               alert("no blank values allowed");
+               return false;
+           }
+           else{
+                true;
+           }
+
+        }
+    
+    </script>
+</head>
+<body>
+
+    <form onsubmit=" return validate()" action="message.html"><!--form  tag helps to submit data to the server.action attribute helps perform action when a form is submitted.here,the action attribute redirects to welcome.html page after the submission of form-->
+<!--here the funtion validate is called only when the form is submitted.-->
+<!--return value makes sure the form is submitted only when the validate function retuns true condtion-->
+        <input id="uname" placeholder="username" type="text"/> 
+        <br><br>
+
+        <input id="pass" placeholder="password" type="password"/>
+
+        <br><br>
+        <button  type="submit">submit</button>
+<!--"submit" type helps to submit data to the server."type=button" will not help to submit data over server-->
+
+    </form>
+        
+</body>
+</html>

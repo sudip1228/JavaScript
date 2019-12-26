@@ -1,0 +1,25 @@
+<!--this code is not running good.i think the problem is occuring due to path set of the image-->
+<html>
+<head>
+    
+    <title>Document</title>
+<script>
+function setnewimage(){
+    document.getElementById("img1").src= "sudip.jpg";
+} 
+
+function setoldimag()
+{
+    document.getElementById("img1").src= "C:/Users/koisu/OneDrive/Desktop/sudip sushila marriage/DCIM/100CANON/javascript.jpg";
+
+}
+
+</script>
+ 
+
+   
+</head>
+<body>
+    <img id="img1" onmouseover="setnewimage()" onmouseout="setoldimag()" src="C:/Users/koisu/OneDrive/Desktop/sudip sushila marriage/DCIM/100CANON/javascript.jpg" width="300"/>
+</body>
+</html>

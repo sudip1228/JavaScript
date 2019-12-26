@@ -1,0 +1,29 @@
+
+<html >
+<head>
+    
+</head>
+<body>
+
+    <h2 id= "heading1">Setting up jquery</h2>
+    <button id="btn1" onclick="fn1()">Click me</button>
+</body>
+
+ <!--<script
+src="https://code.jquery.com/jquery-3.4.1.js"
+integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+crossorigin="anonymous">//this is a alternate way to use jquery.instead of using <script src="jquery/jquery.js">,you can use the above copied source code to use jquery but internet is needed for this</script>
+ it is fast and secure to use this CDN and especially used when deplying your web in live-->
+<script src="jquery.js">//using jquery
+
+
+</script>
+
+<script>
+function fn1()
+{
+    $("#heading1").fadeToggle(2000);//this onec piece of code can perform fade in and out both.It reduces a lot of code.here 2000 is a miliseconds taken to fade in and out.
+}
+</script>
+
+</html>

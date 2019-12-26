@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<title>Basic Animation -Fade in and out </title>
+
+<script>
+var opacity=0;//lesser the opacity more the image is fading.
+var intervalID=0;
+
+function fadeout()
+{
+   intervalID= setInterval(hide,200);//dont know why window object is not required here
+}//every 20 milisecond this setinterval calls hide function and stops only when else condition on hide function matches meaning it stops after opacity is less than 0.
+
+function fadein()
+{
+    intervalID= setInterval(show,200);
+}
+
+function show()//this function fadein the image(opposite of fadeout)
+{
+    var img= document.getElementById("img1");
+   opacity= Number(window.getComputedStyle(img).getPropertyValue("opacity"));
+  
+    if (opacity<1)
+    {
+        opacity= opacity+0.1;
+        img.style.opacity=opacity;
+        console.log(opacity);
+    }
+    else{
+        clearInterval(intervalID);
+    }
+}
+
+function hide()
+{
+   var img= document.getElementById("img1");
+   opacity= Number(window.getComputedStyle(img).getPropertyValue("opacity"));//here Number constructor is used to return value in number.otherwise it was returning a string.
+    //var must be img
+    //img refers tag name
+  //above line is the way to get opacity.
+    if (opacity>0)
+    {
+        opacity= opacity-0.1;//the range of opacity is from 0-1.lesses opacity means higher the image fading.
+        img.style.opacity=opacity;
+    }
+    else{
+        clearInterval(intervalID);
+    }
+
+}
+
+</script>
+</head>
+<body>   
+
+
+    <button onclick= "fadeout()" id="btnadd">fadeout</button>
+    <br>
+    <img id= "img1" src= "demoImage.jpeg" width="250px"/>
+
+    <button onclick= "fadein()" id="btnstop">fadein</button>
+
+    
+</body>
+</html>

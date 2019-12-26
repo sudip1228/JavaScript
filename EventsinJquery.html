@@ -1,0 +1,71 @@
+
+<html >
+    <head>
+        <title>Jquery Selectors</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    
+        
+        <h2>Selectors of jquery</h2>
+
+        <p >This is para without div</p>
+            <p >This is para without div</p>
+        <div id="div1"  class="mydivs" >
+            <p >This is div 1 and para 1</p>
+            <p >This is div 1 and para 2</p>
+            
+        </div>
+
+        <div id= "div2" class="mydivs">
+            <p >This is div 2 and para 3</p>
+        </div>
+         
+        <div id="div3" class="mydivs"> <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+
+        </ul>
+        </div>
+        <div >
+            <p >This is div 4</p>
+            <p >This is div 4</p>
+            
+        </div>
+        <div > <ul>
+            <li>item 11</li>
+            <li>item 12</li>
+            <li>item 13</li>
+            <li>item 14</li>
+
+        </ul>
+        </div>
+
+        <button id="btn1" >Click me</button>
+        <button id="btn2" >Click me 2</button>
+    </body>
+    
+    
+    <script src="jquery.js">//using jquery </script>
+    
+    <script>
+
+        $(document).ready(function(){//using anonymous function which has no function name.It is agood practice. called only when the entire document is loaded in the website.
+
+            $("#btn1").click(fn1);//using button ID which only access the particular button instead of all buttons.
+            $("button").click(fn1);//use of "onclick" event on jquery is different than javascript. "$" means you are using jquery.Here,we can also use anonymous function as above.
+    function fn1()
+    {
+    
+        $("#div1").fadeToggle();
+    }
+
+
+        })
+
+    
+    </script>
+    
+    </html>

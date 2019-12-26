@@ -1,0 +1,56 @@
+
+<html >
+    <head>
+        <title>callback effects</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <button id="btn1" >Toggle</button>
+        
+        
+        <h2>callback effects</h2>
+
+        <p >This is para without div</p>
+        <p >This is para without div</p>
+
+        <div id="div1"  class="mydivs" >
+            <p >This is div 1 and para 1</p>
+            <p >This is div 1 and para 2</p>
+            
+        </div>
+
+        <div id= "div2" class="mydivs">
+            <p >This is div 2 and para 3</p>
+        </div>
+         
+      
+
+    </body>
+    
+    
+    <script src="jquery.js">//using jquery </script>
+    
+    <script>
+
+        
+        $(document).ready(function(){
+
+          
+            $("#btn1").click(function(){
+
+                $("#div1").fadeToggle(5000,function(){//you can use slideToggle here.you can also make a seperate function and and mention it in the parameter insteam of making a anonymous function
+                    alert("divsion is faded");//This anonymous function which is in parameter is a callback.Call back ensures the next line of code is only executed when the previous line of code is done executed,
+
+                });
+                
+           
+            
+
+           });
+
+        });
+
+    
+    </script>
+    
+    </html>

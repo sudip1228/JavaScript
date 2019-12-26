@@ -1,0 +1,66 @@
+
+<html >
+    <head>
+        <title>Jquey Dom</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <button id="btn1" >Add Class</button>
+        <button id="btn2" >Remove Class</button>
+        <button id="btn3" >Toggle Class</button>
+        <button id="btn4" >CSS</button>
+        
+        <br><br>
+        <h2>Jquey Dom</h2>
+
+
+        <div id="div1"  class="mydivs" >
+            <p id="p1" class="class1" value="hello world">This is <b>div 1</b>  and  <b>para 1 <i>ok</i></b></p>
+            <p id="p1" class="class1" value="hello world">This is <b>div 1</b>  and  <b>para 1 <i>ok</i></b></p>
+
+            
+        </div>
+
+        <div id="div2">
+            <p id="p2" class="class2" value="hello world">This is <b>div 2</b>  and  <b>para 1 <i>ok</i></b></p>
+        </div>
+
+        
+    </body>
+    
+    
+    <script src="jquery.js">//using jquery </script>
+    
+    <script>
+
+        
+        $(document).ready(function(){
+
+          $("#btn1").click(function(){
+
+            $("#div1").addClass("newdivclass newparaclass");// addclass method adds class features(eg;color,border) which is mentioned in CSS file for a particular class.
+            })
+
+            $("#btn2").click(function(){
+
+            $("#div1").removeClass("newdivclass newparaclass");// removeclass method removes class features(eg;color,border) which is mentioned in CSS file for a particular class.
+            })
+
+            $("#btn3").click(function(){
+
+            $("#div1").toggleClass("newdivclass newparaclass");// Toggleclass method toggles(performs add and remove class features both) class features(eg;color,border) which is mentioned in CSS file for a particular class.
+})
+
+            $("#btn4").click(function(){
+               // alert($("#div1").css("padding"));//retrieves the css data from the selected html element tag.Here it gives padding info for div1
+                $("#div1").css("font-size","20px");//setting the new css data in div1.
+            } )
+
+            
+          
+        });
+
+    
+    </script>
+    
+    </html>

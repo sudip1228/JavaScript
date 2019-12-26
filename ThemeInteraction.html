@@ -1,0 +1,125 @@
+
+
+<!--copying theme from jqueryui.com. Go under theme section ,and download desired theme and, give the path to that downloaded theme under "src" and "href to change the theme.no need to do coding.the name of the theme that i downloaded was eaggplant-->
+<html >
+    <head>
+        <title>Theme Interaction</title>
+        <link rel="stylesheet" href="style1.css">
+        <!--using jqueryui css files-->
+        
+        <link rel="stylesheet" href="UIThemeIntaraction/jquery-ui.css">
+        <link rel="stylesheet" href="UIThemeIntaraction/jquery-ui.structure.css">
+        <link rel="stylesheet" href="UIThemeIntaraction/jquery-ui.theme.css">
+     </head>
+    <body>
+        <div id="dateinput">
+       <h3 id="heading">Theme Interaction  </h3>
+       <button id="actionbtn">change </button>
+       
+        </div>
+
+
+       <h2>  Accordian Example  </h2>
+        <div id="panels">
+
+       <h3 >Learning 1</h3>
+       <p > i am learning javascript through telusco and i am enjoying it.</p>
+
+       
+      <h3 >Learning 2</h3>
+      <p > i am learning node.js through telusco and i am enjoying it.</p>
+      
+
+     <h3 >Learning 3</h3>
+     <p > i am learning Angular.js through telusco and i am enjoying it. It is nice to lern angular in this year.
+         beacuse it is useful.
+     </p>
+
+        </div>
+<br>
+
+     <h2>  Message Box in Jquery UI  </h2>
+     <div id="div1" class="mydivs">
+
+    <h3 >Learning 1</h3>
+
+     </div>
+     <br>
+     <div id= "div2" title="messagebox" class="mydivs">
+   <h3 >Learning 2</h3>
+             <img src="sudip.jpg" width="200px">
+         <br><br><br>
+              
+     </div>
+
+        </div>
+    </body>
+    
+    <script src="jquery.js" type="text/javascript">//using jquery//this should be always above jqueryUI </script>
+    <script src="jquery-ui.js" type="text/javascript">//using jqueryUI </script> 
+   
+   <script>
+   //$("#mydiv").datepicker();//gives you a date table
+
+   $(document).ready(function (){
+
+   $("#dateinput").datepicker({
+
+       numberOfMonths:1,
+       changeYear:true,
+       changeMonth:true,
+       showWeek:true,
+       weekHeader:"week number ok",
+       showOtherMonths:true,
+       minDate: new Date(2018,0,9),
+       maxDate: new Date(2021,0,16)
+   });
+
+   
+
+    $("#panels").accordion({
+  
+      collapsible:true,//content is hide with another click
+     // event:"mouseover"//content is show with the mouse hover
+      event:"click",//content is shown on mouse click
+      animate:300 ,   //content is shown and hidden at speed of 300 mili second
+      active:1  ,         //second title is open by default by using this
+      heightStyle: true, //manages the space in the acordian titles.
+      icon:{header:"ui-icon-plus", activeHeader:"ui-icon-minus"}
+  
+    });
+ 
+         $("#div2").dialog({//div2 is now converted to dialogBox or message box which you can drag in your website
+         title: "Custom Message Box",//giving new title name to the messgebox.
+         draggable:true,  //activating the dragging function
+         resizable: true,//you can change the size of message box  making it smaller or larger as your wish
+         height: 300, //giving height to the message box
+         weight: 300,  //giving weight to the message box
+        
+ 
+        });
+
+
+        $("#actionbtn").click(function(){
+
+           // var height = $( "#div2" ).dialog( "option", "height" );//copied this code from https://api.jqueryui.com/dialog/#option-height
+            //this above is the getter method of option height of dialog box.
+           // alert(height);//shows the present height of the message box
+           // $( "#div2" ).dialog( "option", "height", 600 );//this is setter code of height copied from the same link
+            //we just changed the selector name in the code
+            $( "#div2" ).dialog( "option", "draggable", false );//setting a draggable option of message box to false
+            //similarly you can modify other options too
+
+            $( "#dateinput" ).datepicker( "option", "numberOfMonths", 3 );//modifiying datepicker
+            $( "#panels" ).accordion( "option", "collapsible", false );//modifying accordian
+            
+        });
+
+
+
+    });
+    </script>
+     
+    
+ 
+    </html>

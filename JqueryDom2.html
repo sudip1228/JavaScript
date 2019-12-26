@@ -1,0 +1,56 @@
+
+<html >
+    <head>
+        <title>Jquey Dom</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <button id="btn1" >set value</button>
+        <button id="btn2" >get value</button>
+        
+        
+        <h2>Jquey Dom</h2>
+
+        <p >This is para without div</p>
+        <p >This is para without div</p>
+
+        <div id="div1"  class="mydivs" >
+            <p id="p1" class="class1" value="hello world">This is <b>div 1</b>  and  <b>para 1 <i>ok</i></b></p>
+            
+        </div>
+
+        
+      
+
+    </body>
+    
+    
+    <script src="jquery.js">//using jquery </script>
+    
+    <script>
+
+        
+        $(document).ready(function(){
+
+          $("#btn1").click(function(){
+
+            $("#p1").css("font-size","25px");//setting new font size using css attribute 
+          //  $("#p1").attr("class","class2");//setting new value for attribute class. This doesnot display output on screen.
+
+          })
+
+          $("#btn2").click(function(){
+            alert($("#p1").css("font-size"));//getting new value using css attribute
+
+             // alert($("#p1").attr("class"));//getting new value for attribute class.
+
+        
+})
+          
+
+        });
+
+    
+    </script>
+    
+    </html>

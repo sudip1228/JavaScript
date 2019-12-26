@@ -1,0 +1,63 @@
+
+<html >
+    <head>
+        <title>Sortable Interaction</title>
+        <link rel="stylesheet" href="style1.css">
+        <!--using jqueryui css files-->
+        
+        <link rel="stylesheet" href="jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui.theme.css">
+     </head>
+    <body>
+
+    <h2>  Sortable Interaction in Jquery UI  </h2>
+
+    <div style="border: 1px solid black" id="mydivs">
+        <div class="cube">
+            <h3>
+
+                CUBE1
+            </h3>
+        </div>
+
+       <div class="cube">
+                <h3>
+    
+                    CUBE2
+                </h3>
+ 
+            </div>
+
+            <div class="cube">
+                <h3>
+    
+                    CUBE3
+                </h3>
+ 
+            </div>
+
+            <img src="sudip.jpg" width="200px" >
+
+    </div>
+    </body>
+    
+    <script src="jquery.js" type="text/javascript">//using jquery//this should be always above jqueryUI </script>
+    <script src="jquery-ui.js" type="text/javascript">//using jqueryUI </script> 
+   
+   <script>
+      $("#mydivs").sortable()({//note: sortable is applied only to parent tag.so we are using the parent div id here.
+      //now the cubes can be sorted in order by moving them around
+      cursor:"grabbing",
+        opacity:0.5,//opacity changes to 0.5 while sorting
+        distance: 50,//if you drag 50 px,then only sorting will happen
+        delay:0,//time taken to happen change
+        containment:"parent",//sorting happens only in current division
+        cursor:"grabbing"//cursor looks like hand
+        
+      });
+      
+   </script>
+    
+ 
+    </html>

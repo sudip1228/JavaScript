@@ -1,0 +1,50 @@
+<html >
+<head>
+    
+    <title>Document</title>
+
+    <script>
+        function validate(){
+          var text= document.getElementById("text1").value;
+            var regx= /^[7-9]\d{9}$/;//  \d represents range from (0-9).{9} represents 9 times
+   //[7-9] shows range of first digit number entered.
+   //similarly \w - match any word character (a-z,A-Z,0-9 & _)
+   //\s - match whitespace character (eg - spaces & tabs)
+   //\t -match a tab only
+   //^ - the number should start from 7-9.it shows the starting values 
+   //$- restrict or indicates the ending space.cant accpet anyvalues afterward $ sign.
+            if(regx.test(text)) {
+
+                document.getElementById("lbltext").innerHTML="valid";
+                document.getElementById("lbltext").style.visibility="visible";
+                document.getElementById("lbltext").style.color="green";
+
+
+            }
+
+            else{
+                document.getElementById("lbltext").innerHTML="invalid";
+                document.getElementById("lbltext").style.visibility="visible";
+                document.getElementById("lbltext").style.color="green";
+            }
+        }
+    
+    </script>
+</head>
+<body>
+
+    <form >
+
+        <input id="text1" placeholder="cellphone" type="text"/> <br>
+        <label id= "lbltext" style="color:red; visibility:hidden">invalid</label>
+        <br><br>
+
+        
+
+        <br><br>
+        <button onclick="validate()" type="button">submit</button>
+
+    </form>
+        
+</body>
+</html>

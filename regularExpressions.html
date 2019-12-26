@@ -1,0 +1,40 @@
+<html >
+<head>
+    
+    <title>Document</title>
+
+    <script>
+        function validate(){
+          var username=document.getElementById("uname").value;
+            var regex= /E00/i;//using regular expression.here "i" is used to make expression case insensitive
+            if(regex.test(username))//returns boolean true value if username contains E00
+            {
+
+                alert("valid username");
+            }
+
+            else{
+                alert("invalid username");
+                document.getElementById("lbluser").style.visibility="visible";//using label of html to highlight the invalid message
+            }
+        }
+    
+    </script>
+</head>
+<body>
+
+    <form action="message.html">
+
+        <input id="uname" placeholder="username" type="text"/> 
+        <label id= "lbluser" style="color:red; visibility:hidden">invalid</label>
+        <br><br>
+
+        
+
+        <br><br>
+        <button onclick="validate()" type="button">submit</button>
+
+    </form>
+        
+</body>
+</html>

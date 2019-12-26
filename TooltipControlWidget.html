@@ -1,0 +1,45 @@
+
+<html >
+    <head>
+        <title>Jquery UI/title</title>
+        <link rel="stylesheet" href="style1.css">
+        <!--using jqueryui css files-->
+        
+        <link rel="stylesheet" href="jquery-ui.css">
+        <link rel="stylesheet" href="jquery-ui.structure.css">
+        <link rel="stylesheet" href="jquery-ui.theme.css">
+     </head>
+    <body>
+        <div id="mydiv">
+       <h3 id="heading">Tooltip Control </h3>
+       
+       <img src="sudip.jpg" width="200px" title="sudip" id="myimg"> 
+        </div>
+    </body>
+    
+    <script src="jquery.js" type="text/javascript">//using jquery//this should be always above jqueryUI </script>
+    <script src="jquery-ui.js" type="text/javascript">//using jqueryUI </script> 
+   
+   <script>
+  $("img").tooltip({
+
+    //track:true, //track helps tooltip to follow the mouse or cursor 
+    content:"sudip is best" ,//change the name of title
+    show: {effect:"bounce", duration:5000},//tooltip bounces for 5000 miliseconds
+   // show: {effect:"pulsate", duration:5000} //another effect you can use, name is pulsate
+   //show: {effect:"highlight", duration:5000}
+   //show: {effect:"explode", duration:5000}
+   //show: {effect:"blind", duration:5000}
+   hide: {effect:"explode", duration:5000},//this effect is exected when the cursor leaves the image
+
+
+
+  });//it helps customizing the title tag of image
+
+    
+  
+
+   </script>
+    
+ 
+    </html>
